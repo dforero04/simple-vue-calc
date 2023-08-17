@@ -1,13 +1,11 @@
 <script setup>
-  import CalcContainer from './components/CalcContainer.vue'
-
+import CalcContainer from './components/CalcContainer.vue'
 </script>
 
 <template>
   <h1>Simple Vue Calculator</h1>
-  
-  <CalcContainer/>
+
+  <CalcContainer />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

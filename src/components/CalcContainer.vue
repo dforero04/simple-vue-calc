@@ -1,9 +1,13 @@
 <script setup>
-  import {ref} from 'vue';
+import CalcKeypad from './CalcKeypad.vue'
+import { reactive } from 'vue'
 
-  const equation = ref('');
+const equation = reactive({
+  equation: ''
+})
 </script>
 
 <template>
-  <input v-model="equation" placeholder="Enter calculation">
+  <input v-model="equation" placeholder="Enter calculation" />
+  <CalcKeypad/>
 </template>
