@@ -1,13 +1,62 @@
 <script setup>
-import CalcKeypad from './CalcKeypad.vue'
-import { reactive } from 'vue'
+import { ref } from 'vue'
 
-const equation = reactive({
-  equation: ''
-})
+const inputNum = ref(0)
+
+function handleClick(event) {
+  inputNum.value = event.target.value;
+}
 </script>
 
 <template>
-  <input v-model="equation" placeholder="Enter calculation" />
-  <CalcKeypad/>
+  <div class="calc">
+    <span class="title">Simple Vue Calculator</span>
+    <div class="calc-container">
+      <input class="calc-input" v-model="inputNum" placeholder="Enter calculation" />
+      <div class="keypad">
+        <button value=1 @click="handleClick">1</button>
+      </div>
+    </div>
+  </div>
 </template>
+
+<style>
+.calc {
+  width: 350px;
+  margin: 40px auto 0 auto;
+  position: relative;
+}
+
+.calc span.title {
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  text-align: center;
+}
+
+.calc-container {
+  margin-top: 30px;
+  width: 100%;
+}
+
+input {
+  font-size: 20px;
+  color: #d1d1d1;
+  width: 80%;
+  font-weight: 400;
+}
+
+input .calc-input {
+  height: 55px;
+  line-height: 55px;
+  text-align: right;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+.keypad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

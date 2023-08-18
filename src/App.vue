@@ -3,9 +3,17 @@ import CalcContainer from './components/CalcContainer.vue'
 </script>
 
 <template>
-  <h1>Simple Vue Calculator</h1>
-
-  <CalcContainer />
+  <div class="wrapper">
+    <CalcContainer />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+}
+</style>
