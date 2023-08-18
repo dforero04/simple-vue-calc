@@ -1,10 +1,14 @@
 <script setup>
 import { ref } from 'vue'
 
-const inputNum = ref(0)
+const inputNum = ref('')
 
 function handleClick(event) {
   inputNum.value = event.target.value;
+}
+
+function handleAdd(event) {
+
 }
 </script>
 
@@ -15,6 +19,11 @@ function handleClick(event) {
       <input class="calc-input" v-model="inputNum" placeholder="Enter calculation" />
       <div class="keypad">
         <button value=1 @click="handleClick">1</button>
+        <button value=2 @click="handleClick">2</button>
+        <button value=3 @click="handleClick">3</button>
+        <button value=4 @click="handleClick">4</button>
+        <button value=5 @click="handleClick">5</button>
+        <button value=5 @click="handleAdd">+</button>
       </div>
     </div>
   </div>
