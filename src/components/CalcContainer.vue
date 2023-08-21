@@ -79,7 +79,7 @@ function handleEquals() {
 
 input {
   font-size: 20px;
-  color: red;
+  color: blue;
   width: 80%;
   font-weight: 400;
 }
